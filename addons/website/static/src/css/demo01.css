@@ -1,0 +1,74 @@
+/*#demo{*/
+/*    color: red;*/
+/*}*/
+
+/*个人主页*/
+.list-group-item {
+    color: #FF4400;
+}
+
+.o_portal_my_details {
+    color: #007bff;
+    margin-left: -100px;
+}
+
+.mt-4 {
+    color: #FF4400;
+}
+
+#xiaohongxin {
+    background-color: white;
+    border-color: white;
+}
+
+/*轮播图*/
+.oe_structure .carousel-item .oe_custom_bg .oe_img_bg .pt96 .pb96 {
+    height: 300px;
+}
+
+#myCarousel1573804061730 {
+    height: 300px;
+}
+
+/*my home 搜索功能*/
+.sstimecss{
+    /*width: 100px;*/
+}
+.sstimecss::-webkit-inner-spin-button {
+    visibility: hidden;
+}
+
+
+.ordercss {
+    width: 240px;
+}
+/*心愿单数量加减样式*/
+.wish_input_number_td{
+    text-align: center;
+    margin: 10px 0 0;
+}
+.wish_number_div{
+    width: 100px;
+}
+.wish_number{
+    display: flex;
+}
+.input_number{
+    width: 55px;
+    height: 30px;
+    text-align: center;
+}
+.button_one_jian{
+    cursor:pointer;
+}
+.button_two_jia{
+    cursor:pointer;
+}
+.button_one_jian > i {
+    color: #007bff;
+    font-size: 30px;
+}
+.button_two_jia > i {
+    color: #007bff;
+    font-size: 30px;
+}
