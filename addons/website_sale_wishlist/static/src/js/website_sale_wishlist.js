@@ -17,6 +17,7 @@ odoo.define('website_sale_wishlist.wishlist', function (require) {
             'change input.js_product_change': '_onChangeProduct',
             'click .wishlist-section .o_wish_rm': '_onClickWishRemove',
             'click .wishlist-section .o_wish_add': '_onClickWishAdd',
+            // 'click .portal_pager_AddToCart_button_class': '_onClickWishAdd',
         },
         events: sAnimations.Class.events,
 
@@ -166,11 +167,11 @@ odoo.define('website_sale_wishlist.wishlist', function (require) {
             var product = tr.data('product-id');
             $('#my_cart').removeClass('d-none');
             wSaleUtils.animateClone($('#my_cart'), tr, 25, 40);
-
+            //修改加入购物车数量
             if ($('#b2b_wish').is(':checked')) {
-                return this._addToCart(product, tr.find('add_qty').val() || 1);
+                return this._addToCart(product, tr.find('input[class*=input_number]').val() || 1);
             } else {
-                var adding_deffered = this._addToCart(product, tr.find('add_qty').val() || 1);
+                var adding_deffered = this._addToCart(product, tr.find('input[class*=input_number]').val() || 1);
                 this._removeWish(e, adding_deffered);
                 return adding_deffered;
             }
@@ -178,12 +179,12 @@ odoo.define('website_sale_wishlist.wishlist', function (require) {
         /**
          * @private
          */
-        _addToCart: function (productID, qty_id) {
+        _addToCart: function (productID, add_qty) {
             return this._rpc({
                 route: "/shop/cart/update_json",
                 params: {
                     product_id: parseInt(productID, 10),
-                    add_qty: parseInt(10, 10),
+                    add_qty: parseInt(add_qty, 10),
                     display: false,
                 },
             }).then(function (resp) {
@@ -273,6 +274,7 @@ odoo.define('website_sale_wishlist.wishlist', function (require) {
             this.$('.wishlist-section .o_wish_add').addClass('disabled');
             this._addOrMoveWish(ev).then(function () {
                 self.$('.wishlist-section .o_wish_add').removeClass('disabled');
+
             });
         },
     });

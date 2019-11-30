@@ -18,7 +18,7 @@ from odoo.osv import expression
 
 _logger = logging.getLogger(__name__)
 
-PPG = 20  # Products Per Page
+PPG = 12  # Products Per Page
 PPR = 4   # Products Per Row
 
 

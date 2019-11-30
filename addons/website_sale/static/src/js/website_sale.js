@@ -526,6 +526,9 @@ sAnimations.registry.WebsiteSale = sAnimations.Class.extend(ProductConfiguratorM
      * @param {Event} ev
      */
     _onClickSubmit: function (ev, forceSubmit) {
+        console.log(
+            '***********'
+        )
         if ($(ev.currentTarget).is('#add_to_cart, #products_grid .a-submit') && !forceSubmit) {
             return;
         }

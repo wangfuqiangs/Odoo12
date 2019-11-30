@@ -2,6 +2,23 @@
 /*    color: red;*/
 /*}*/
 
+/*SHOP主页*/
+#oe_product_image_id{
+}
+#oe_product_image_id > a > span > img {
+    margin: 0;
+}
+.shop_checkbox_max_div{
+    display: flex;
+
+    margin-top: 200px;
+}
+.products_item_input_class{
+
+}
+.wish_number_div{
+
+}
 /*个人主页*/
 .list-group-item {
     color: #FF4400;
@@ -49,6 +66,7 @@
 }
 .wish_number_div{
     width: 100px;
+
 }
 .wish_number{
     display: flex;
